@@ -8,7 +8,7 @@ import {
     olvidePassword,
     perfil,
     registrar
-} from "../controllers/usuarioController";
+} from "../controllers/usuarioController.js";
 
 const router = express.Router();
 
