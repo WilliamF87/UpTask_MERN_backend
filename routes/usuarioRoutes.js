@@ -1,4 +1,5 @@
 import express from "express";
+import checkAuth from "../middleware/checkAuth.js";
 import {
     autenticar,
     comprobarToken,
@@ -8,7 +9,6 @@ import {
     perfil,
     registrar
 } from "../controllers/usuarioController";
-import checkAuth from "../middleware/checkAuth.js";
 
 const router = express.Router();
 
@@ -22,6 +22,6 @@ router.route("/olvide-password/:token")
     .post(nuevoPassword); // Almacenar el nuevo password
 
 router.get("/perfil", checkAuth, perfil);
-// next me permite saltar al siguiente middleware (checkAuth y perfil son middlewares)
+// next me permite saltar al siguiente middleware (desde checkAuth a perfil)
 
 export default router;
