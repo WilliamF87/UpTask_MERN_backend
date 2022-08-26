@@ -7,7 +7,7 @@ import {
     olvidePassword,
     perfil,
     registrar
-} from "../controllers/UsuarioController.js";
+} from "../controllers/usuarioController";
 import checkAuth from "../middleware/checkAuth.js";
 
 const router = express.Router();
